@@ -1,0 +1,88 @@
+First set of results have everything naive implementaton 
+(resolving from scratch for sci-kit and naive implementation;
+ADMM warm starts with previous solution)
+-----------------------------------------------------------
+
+Samples per batch: 10000000, with 5 batches. Max data size: 50000000
+Number of feature: 4
+Iteration: 0
+admm_vs_optimal_error: 1.1550308207453443e-12
+Iteration: 1
+admm_vs_optimal_error: 0.0025155898423701376
+Iteration: 2
+admm_vs_optimal_error: 0.0019552558642960756
+Iteration: 3
+admm_vs_optimal_error: 0.0017236030016967328
+Iteration: 4
+admm_vs_optimal_error: 0.0021272348631440692
+Fitting Times:
+scikit-learn: 2.6005 ; admm: 1.3474 ; naive: 1.2793
+scikit-learn: 5.4489 ; admm: 3.0281 ; naive: 3.9866
+scikit-learn: 10.6144 ; admm: 2.3366 ; naive: 7.0240
+scikit-learn: 13.2711 ; admm: 1.8436 ; naive: 14.6557
+scikit-learn: 55.0493 ; admm: 6.5745 ; naive: 17.8925
+
+-----------------------------------------------------------
+This set of results uses the fact that if 
+X = [X_1 X_2].T where X_1 an X_2 are previous data sets, then
+X.T @ X = X_1.T @ X_1 + X_2.T @ X_2
+
+-----------------------------------------------------------
+
+Samples per batch: 10000000, with 5 batches. Max data size: 50000000
+Number of feature: 4
+admm_vs_optimal_error: 8.234167165009706e-13
+admm_vs_optimal_error: 0.003551059580245505
+admm_vs_optimal_error: 0.0025610798886578257
+admm_vs_optimal_error: 0.0017503366555739835
+admm_vs_optimal_error: 0.0010925805657909333
+scikit-learn: 2.8047 ; admm: 4.6585 ; naive: 1.1309
+scikit-learn: 5.4401 ; admm: 1.4445 ; naive: 1.6620
+scikit-learn: 12.9787 ; admm: 2.5735 ; naive: 3.5868
+scikit-learn: 20.3408 ; admm: 3.0686 ; naive: 5.4615
+scikit-learn: 36.2147 ; admm: 3.2659 ; naive: 6.8728
+
+-----------------------------------------------------------
+
+Samples per batch: 1000000, with 20 batches. Max data size: 20000000
+Number of feature: 4
+admm_vs_optimal_error: 8.018403519064389e-14
+admm_vs_optimal_error: 0.011563331587911809
+admm_vs_optimal_error: 0.007522085965902089
+admm_vs_optimal_error: 0.004134621520373846
+admm_vs_optimal_error: 0.004758265591043878
+admm_vs_optimal_error: 0.005485563894742495
+admm_vs_optimal_error: 0.005119543745002235
+admm_vs_optimal_error: 0.004887207245248453
+admm_vs_optimal_error: 0.003993973643217416
+admm_vs_optimal_error: 0.002762163852286485
+admm_vs_optimal_error: 0.002824735130037805
+admm_vs_optimal_error: 0.003414684005056674
+admm_vs_optimal_error: 0.0034375306323123295
+admm_vs_optimal_error: 0.0025958874536543878
+admm_vs_optimal_error: 0.003079776908830376
+admm_vs_optimal_error: 0.0030835431216972324
+admm_vs_optimal_error: 0.002732178483593591
+admm_vs_optimal_error: 0.002800703182186034
+admm_vs_optimal_error: 0.0021662951960741807
+admm_vs_optimal_error: 0.001528293253807393
+scikit-learn: 0.9556 ; admm: 0.5187 ; naive: 0.1455
+scikit-learn: 2.1431 ; admm: 0.4718 ; naive: 0.1768
+scikit-learn: 2.4496 ; admm: 0.4555 ; naive: 0.2651
+scikit-learn: 0.7902 ; admm: 0.1764 ; naive: 0.2331
+scikit-learn: 0.9178 ; admm: 0.1378 ; naive: 0.2805
+scikit-learn: 1.3968 ; admm: 0.1335 ; naive: 0.3619
+scikit-learn: 1.6513 ; admm: 0.2801 ; naive: 0.6869
+scikit-learn: 1.8644 ; admm: 0.1370 ; naive: 0.9536
+scikit-learn: 1.9678 ; admm: 0.2197 ; naive: 1.0615
+scikit-learn: 1.9743 ; admm: 0.2662 ; naive: 1.1121
+scikit-learn: 2.9557 ; admm: 0.1328 ; naive: 1.1918
+scikit-learn: 3.2403 ; admm: 0.1451 ; naive: 1.2117
+scikit-learn: 3.6511 ; admm: 0.1502 ; naive: 1.2498
+scikit-learn: 3.9869 ; admm: 0.1445 ; naive: 1.2668
+scikit-learn: 5.1245 ; admm: 0.1647 ; naive: 1.4099
+scikit-learn: 3.6494 ; admm: 0.1354 ; naive: 1.5326
+scikit-learn: 9.9907 ; admm: 0.1017 ; naive: 1.5382
+scikit-learn: 4.3598 ; admm: 0.1460 ; naive: 1.4664
+scikit-learn: 4.4193 ; admm: 0.0295 ; naive: 2.5107
+scikit-learn: 5.0195 ; admm: 0.0457 ; naive: 3.1518
